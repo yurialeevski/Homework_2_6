@@ -69,4 +69,8 @@ public class Truck<T extends Driver_Category_C> extends Transport implements Com
             System.out.println("Данных по транспортному средству недостаточно");
         }
     }
+    @Override
+    public void passCarDiagnostics() {
+        System.out.println("Грузовой автомобиль " + getBrand() + " " + getModel() + " проходит диагностику.");
+    }
 }

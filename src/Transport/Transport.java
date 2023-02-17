@@ -36,4 +36,5 @@ public abstract class Transport {
     public abstract void stopMovement();
     public abstract String getType();
     public abstract void printType();
+    public abstract void passCarDiagnostics() throws TransportTypeException;
 }
