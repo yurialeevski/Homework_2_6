@@ -77,4 +77,8 @@ public class PassengerCar<T extends Driver_Category_B> extends Transport impleme
             System.out.println("Данных по транспортному средству недостаточно");
         }
     }
+    @Override
+    public void passCarDiagnostics() {
+        System.out.println("Легковой автомобиль " + getBrand() + " " + getModel() + " проходит диагностику.");
+    }
 }

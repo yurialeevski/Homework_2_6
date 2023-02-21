@@ -71,4 +71,8 @@ public class Bus<T extends Driver_Category_D> extends Transport implements Compe
             System.out.println("Данных по транспортному средству недостаточно");
         }
     }
+    @Override
+    public void passCarDiagnostics() throws TransportTypeException {
+        throw new TransportTypeException("Автобусы не должны проходить диагностику!");
+    }
 }

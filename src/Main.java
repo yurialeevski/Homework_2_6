@@ -25,7 +25,7 @@ public class Main {
         petrov.startDriving();
         petrov.stopDriving();
         petrov.fillFuel();
-
+        bmw.passCarDiagnostics();
         System.out.println();
 
         Driver_Category_C ivanov = new Driver_Category_C("Иванов", true, 9);
@@ -48,7 +48,7 @@ public class Main {
         ivanov.startDriving();
         ivanov.stopDriving();
         ivanov.fillFuel();
-        System.out.println(volvo.getType());
+        renault.passCarDiagnostics();
         System.out.println();
 
         Driver_Category_D sidorov = new Driver_Category_D("Сидоров", true, 20);
@@ -71,6 +71,13 @@ public class Main {
         sidorov.startDriving();
         sidorov.stopDriving();
         sidorov.fillFuel();
+        try {
+        maz.passCarDiagnostics();
+        } catch (TransportTypeException buses) {
+            System.out.println(buses.getMessage());
+        } finally {
+            System.out.println("Диагностика завершена.");
+        }
     }
     public static void printInformation(Driver driver, Transport transport) {
         System.out.println("Водитель " + driver.getFullName() +
